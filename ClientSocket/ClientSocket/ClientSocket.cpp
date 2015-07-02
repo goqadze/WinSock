@@ -59,17 +59,9 @@ int _tmain(int argc, _TCHAR* argv[])
 	}
 	////////////
 
-	char *message = new char[256];
-	ZeroMemory(message, 256);
-	recv(sConnect, message, 256, NULL);
-
-	printf("%s %s", message, Name);
-
-	printf("Press enter to continue\n"); getchar();
 	system("cls");
-
 	printf("let's chat %s\n", Name);
-
+	getchar();
 	CreateThread(0, 0, (LPTHREAD_START_ROUTINE)ClientThread, 0, 0, 0);
 
 	while (true)

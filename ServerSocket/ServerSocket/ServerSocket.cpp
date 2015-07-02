@@ -73,15 +73,6 @@ int _tmain(int argc, _TCHAR* argv[])
 		ZeroMemory(Name[counter], 256);
 		recv(sConnections[counter], Name[counter], 256, NULL);
 
-		int sendRes = send(sConnections[counter], "Welcome", 256, NULL);
-		if (sendRes == SOCKET_ERROR)
-		{
-			printf("send failed with error: %d\n", WSAGetLastError());
-			closesocket(sConnections[counter]);
-			WSACleanup();
-			return 1;
-		}
-
 		CreateThread(0, 0, (LPTHREAD_START_ROUTINE)ServsClient, (void *)counter, 0, 0);
 		counter++;
 	}
