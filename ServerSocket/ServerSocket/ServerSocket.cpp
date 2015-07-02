@@ -20,7 +20,7 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	addr.sin_family = AF_INET;
 	addr.sin_port = htons(2222);
-	addr.sin_addr.S_un.S_addr = inet_addr("192.168.20.217");
+	addr.sin_addr.S_un.S_addr = inet_addr("127.0.0.1");
 
 	iResult = WSAStartup(MAKEWORD(2, 2), &wsaData);//2.2 
 
