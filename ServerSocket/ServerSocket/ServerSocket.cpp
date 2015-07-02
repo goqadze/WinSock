@@ -101,7 +101,7 @@ unsigned int __stdcall ServsClient(void * p)
 	int size = 0;
 	while (true)
 	{
-		ZeroMemory(buffer, 256);
+		ZeroMemory(message, 256);
 		if (size = recv(sConnections[id], message, 256, NULL) > 0)
 		{
 			for (int i = 0; i < counter; i++)
