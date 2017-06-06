@@ -44,7 +44,8 @@ int _tmain(int argc, _TCHAR* argv[])
 		closesocket(sConnect);
 		return 0;
 	}
-	//// auth
+	
+	///*******/////
 	Name = new char[256];
 	printf("Your Name: ");
 	scanf("%s", Name);
@@ -57,7 +58,7 @@ int _tmain(int argc, _TCHAR* argv[])
 		WSACleanup();
 		return 1;
 	}
-	////////////
+	///********/////
 
 	system("cls");
 	printf("let's chat %s\n", Name);
